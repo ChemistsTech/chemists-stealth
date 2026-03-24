@@ -9,15 +9,10 @@
   <nav class="relative z-10 px-6 py-6 md:px-12">
     <div class="max-w-6xl mx-auto flex items-center justify-between">
       <!-- Logo -->
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 bg-forest rounded-xl flex items-center justify-center">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-          </svg>
-        </div>
-        <span class="text-xl font-semibold text-forest" style="font-family: var(--font-display)">Chemists</span>
+      <div>
+        <img src="assets/chemists-secondary-logo.svg" alt="Chemists Logo" class="h-6 w-auto">
       </div>
-      
+
       <!-- Social Proof Badge (Desktop) -->
       <div class="hidden md:flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-forest/10">
         <div class="flex -space-x-2">
@@ -33,18 +28,18 @@
   <!-- Main Content -->
   <main class="relative z-10 px-6 md:px-12 pb-16">
     <div class="max-w-6xl mx-auto">
-      
+
       <!-- Hero Section -->
       <section class="text-center py-12 md:py-20">
         <div class="inline-flex items-center gap-2 bg-forest/10 text-forest px-4 py-2 rounded-full text-sm font-medium mb-8">
           <span class="w-2 h-2 bg-forest rounded-full animate-pulse"></span>
           Coming Soon to Nigeria
         </div>
-        
+
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-forest leading-tight mb-6" style="font-family: var(--font-display)">
           The Science of a<br class="hidden md:block"> Better You.
         </h1>
-        
+
         <p class="text-lg md:text-xl text-sage max-w-2xl mx-auto leading-relaxed mb-12">
           Chemists is your digital sanctuary for holistic health. We combine personalized weight loss tracks, professional psychological support, and expert nutrition advice—all in one app.
         </p>
@@ -67,17 +62,17 @@
           <p class="text-sage mb-6">
             Get early access when we launch. No spam, just wellness.
           </p>
-          
+
           <form class="flex flex-col sm:flex-row gap-4" (submit)="onSubmit($event)">
-            <input 
-              type="email" 
-              placeholder="Enter your email address" 
+            <input
+              type="email"
+              placeholder="Enter your email address"
               [(ngModel)]="email"
               required
               class="flex-1 px-5 py-4 rounded-xl border border-forest/20 bg-white/80 text-forest placeholder:text-sage/60 focus:border-forest focus:ring-2 focus:ring-forest/10 transition-all"
             >
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               class="btn-primary px-8 py-4 rounded-xl text-white font-semibold whitespace-nowrap"
               [disabled]="isSubmitting()"
             >
@@ -101,7 +96,7 @@
               }
             </button>
           </form>
-          
+
           @if (isSubmitted()) {
             <p class="mt-4 text-forest-light text-sm flex items-center justify-center gap-2">
               <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,7 +105,7 @@
               Thanks for joining! We'll be in touch soon.
             </p>
           }
-          
+
           <p class="text-xs text-sage/70 mt-4">
             By signing up, you agree to receive wellness updates from Chemists.
           </p>
